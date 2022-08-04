@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;600&display=swap');
+
+:root{
+	--spanish_green:#058C42;
+	--malachite:#16DB65;
+	--dark_jungles:#001514;
+	--cultured:#F6F7F8;
+	--spring_green:#18ff6d;
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding:0;
+	font-family: 'Edu NSW ACT Foundation', cursive;
+}
+
+body{
+	display:flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background: var(--cultured);
+	color: var(--dark_jungles);
+}
+
+header{
+	padding: 2rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+header h1{
+	font-size: 2.5rem;
+	font-weight: 300;
+	color: var(--spanish_green);
+}
+
+.newSubject{
+	display:flex;
+}
+
+input,button{
+	appearance: none;
+	border:none;
+	outline:none;
+	background: var(--dark_jungles);
+	color: var(--cultured);
+	
+}
+
+.newSubject__input{
+	flex: 1 1 0%;
+	background-color: var(--dark_jungles);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	font-size: 1.25rem;
+}
+
+.newSubject__input::placeholder{
+	color: var(--cultured)
+}
+
+.newSubject__submit{
+	color:var(--spanish_green);
+	font-size: 1.25rem;
+	font-weight: 700;
+	background-image: linear-gradient(to right, var(--spanish_green), var(--spring_green));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+	transition:0.4;
+}
+.newSubject__subtmit:hover{
+	opacity: 0.8;
+
+}
+.newSubject__subtmit:active{
+	opacity: 0.6;
+	
+}
+
+main{
+	flex-basis: content;
+	padding: 1rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.subjectList{
+	
+	padding: 1rem;
+}
+
+.subjectList h2{
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: var(--spanish_green);
+	margin-bottom: 1rem;
+}
+
+#subjects .subjects{
+	
+	background-color: var(--dark_jungles);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+}
+
+#subjects .subjects .content{
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+} 
+
+#subjects .subjects .content  .text{
+	color: var(--cultured);
+	font-size: 1.125rem;
+	width: 30%;
+	display: block;
+	transition: 0.4;
+}
+
+#subjects .subjects .content  .text:not(:read-only){
+	color: var(--spanish_green); /*editando*/ 
+}
+
+#subjects .subjects .actions{
+	display:flex;
+	margin: 0 -0.5rem;
+}
+
+.subjects .actions button{
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size: 0.8rem;
+	width: 50px;
+	text-transform: uppercase; 
+	border-radius: 1rem;
+	transition: 0.4s;
+}
+
+#subjects .subjects .actions button:hover{
+	opacity: 0.8;
+	
+}
+
+#subjects .subjects .actions button:active{
+	opacity: 0.6;
+	
+}
+
+#subjects .subjects .actions .edit{
+	background-image: linear-gradient(to right, var(--spanish_green), var(--spring_green));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+	transition:0.4;
+}
+
+#subjects .subjects .actions .addDay{
+	background-image: linear-gradient(to right, var(--spanish_green), var(--spring_green));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+	transition:0.4;
+}
+
+#subjects .subjects .actions .delete{
+	color: crimson;
+	
+}
